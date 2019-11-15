@@ -61,6 +61,7 @@
 		61E2A3F2237E6EBA004F277A /* Calculator-ios */ = {
 			isa = PBXGroup;
 			children = (
+				61E2A40C237E6F20004F277A /* New Group */,
 				61E2A3F3237E6EBA004F277A /* AppDelegate.h */,
 				61E2A3F4237E6EBA004F277A /* AppDelegate.m */,
 				61E2A3F6237E6EBA004F277A /* SceneDelegate.h */,
@@ -74,6 +75,13 @@
 				61E2A405237E6EBD004F277A /* main.m */,
 			);
 			path = "Calculator-ios";
+			sourceTree = "<group>";
+		};
+		61E2A40C237E6F20004F277A /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
