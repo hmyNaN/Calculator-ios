@@ -10,6 +10,7 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-
+//iOS13以下根本没有UIScene这一层.
+@property (strong, nonatomic) UIWindow *window;
 @end
 
