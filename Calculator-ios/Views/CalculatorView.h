@@ -41,6 +41,11 @@
     UIButton *btn1, *btn2, *btn3, *btnAdd;
     UIButton *btn0, *btnDot, *btnWait;
     
+    //标记当前计算（预算符号）
+    NSString * operationStr;
+    double storageNum;
+    bool isshow;
+    bool iscalculate;
     
 
     

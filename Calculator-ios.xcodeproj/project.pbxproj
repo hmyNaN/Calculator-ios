@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		611920112381437800BA452F /* image in Resources */ = {isa = PBXBuildFile; fileRef = 611920102381437600BA452F /* image */; };
+		611920142381540400BA452F /* module-logo-app-calculator.png in Resources */ = {isa = PBXBuildFile; fileRef = 611920132381540300BA452F /* module-logo-app-calculator.png */; };
 		61E2A3F5237E6EBA004F277A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E2A3F4237E6EBA004F277A /* AppDelegate.m */; };
 		61E2A3F8237E6EBA004F277A /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E2A3F7237E6EBA004F277A /* SceneDelegate.m */; };
 		61E2A3FB237E6EBA004F277A /* CalculatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E2A3FA237E6EBA004F277A /* CalculatorView.m */; };
@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		611920102381437600BA452F /* image */ = {isa = PBXFileReference; lastKnownFileType = folder; name = image; path = "../../../Objective-C-Test/helloios/image"; sourceTree = "<group>"; };
+		611920132381540300BA452F /* module-logo-app-calculator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "module-logo-app-calculator.png"; path = "../../../Objective-C-Test/helloios/image/module-logo-app-calculator.png"; sourceTree = "<group>"; };
 		61E2A3F0237E6EBA004F277A /* Calculator-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calculator-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61E2A3F3237E6EBA004F277A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		61E2A3F4237E6EBA004F277A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -44,9 +44,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61192012238153F200BA452F /* images */ = {
+			isa = PBXGroup;
+			children = (
+				611920132381540300BA452F /* module-logo-app-calculator.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		61E2A3E7237E6EBA004F277A = {
 			isa = PBXGroup;
 			children = (
+				61192012238153F200BA452F /* images */,
 				61E2A3F2237E6EBA004F277A /* Calculator-ios */,
 				61E2A3F1237E6EBA004F277A /* Products */,
 			);
@@ -63,7 +72,6 @@
 		61E2A3F2237E6EBA004F277A /* Calculator-ios */ = {
 			isa = PBXGroup;
 			children = (
-				611920102381437600BA452F /* image */,
 				61E2A40D237E71D7004F277A /* Views */,
 				61E2A40C237E6F20004F277A /* AppDelegate */,
 				61E2A3F6237E6EBA004F277A /* SceneDelegate.h */,
@@ -152,9 +160,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				611920112381437800BA452F /* image in Resources */,
 				61E2A403237E6EBD004F277A /* LaunchScreen.storyboard in Resources */,
 				61E2A400237E6EBD004F277A /* Assets.xcassets in Resources */,
+				611920142381540400BA452F /* module-logo-app-calculator.png in Resources */,
 				61E2A3FE237E6EBA004F277A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

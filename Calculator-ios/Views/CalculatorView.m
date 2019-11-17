@@ -50,7 +50,7 @@
     numInfolLabel.textColor = textcolorwhite;
     numInfolLabel.backgroundColor = backgroundcolorblack;
     numInfolLabel.textAlignment = NSTextAlignmentRight;
-    numInfolLabel.text = @"416.6667";
+    numInfolLabel.text = @"0";
     [self.view addSubview:numInfolLabel];
     
     //数字键盘
@@ -427,7 +427,36 @@
     btnWait.titleLabel.font = numberBtnFont;
     
     
+    //数字点击事件
+    [btn0 addTarget:self action:@selector(workButtonNumber:) forControlEvents:UIControlEventTouchUpInside];
+    [btn1 addTarget:self action:@selector(workButtonNumber:) forControlEvents:UIControlEventTouchUpInside];
+    [btn2 addTarget:self action:@selector(workButtonNumber:) forControlEvents:UIControlEventTouchUpInside];
+    [btn3 addTarget:self action:@selector(workButtonNumber:) forControlEvents:UIControlEventTouchUpInside];
+    [btn4 addTarget:self action:@selector(workButtonNumber:) forControlEvents:UIControlEventTouchUpInside];
+    [btn5 addTarget:self action:@selector(workButtonNumber:) forControlEvents:UIControlEventTouchUpInside];
+    [btn6 addTarget:self action:@selector(workButtonNumber:) forControlEvents:UIControlEventTouchUpInside];
+    [btn7 addTarget:self action:@selector(workButtonNumber:) forControlEvents:UIControlEventTouchUpInside];
+    [btn8 addTarget:self action:@selector(workButtonNumber:) forControlEvents:UIControlEventTouchUpInside];
+    [btn9 addTarget:self action:@selector(workButtonNumber:) forControlEvents:UIControlEventTouchUpInside];
     
+    //清空
+    [btnEmpty addTarget:self action:@selector(workButtonEmpty:) forControlEvents:UIControlEventTouchUpInside];
+    //小数点
+    [btnDot addTarget:self action:@selector(workButtonDot:) forControlEvents:UIControlEventTouchUpInside];
+    //正负
+    [btnLose addTarget:self action:@selector(workButtonLose:) forControlEvents:UIControlEventTouchUpInside];
+    
+    //百分比
+    [btnPercent addTarget:self action:@selector(workButtonPercent:) forControlEvents:UIControlEventTouchUpInside];
+    
+    //加减乘除
+    [btnAdd addTarget:self action:@selector(addReduceRideDivide:) forControlEvents:UIControlEventTouchUpInside];
+    [btnReduce addTarget:self action:@selector(addReduceRideDivide:) forControlEvents:UIControlEventTouchUpInside];
+    [btnRide addTarget:self action:@selector(addReduceRideDivide:) forControlEvents:UIControlEventTouchUpInside];
+    [btnDivide addTarget:self action:@selector(addReduceRideDivide:) forControlEvents:UIControlEventTouchUpInside];
+    
+    //等号
+    [btnWait addTarget:self action:@selector(workButtonWait:) forControlEvents:UIControlEventTouchUpInside];
     
     
     
@@ -698,7 +727,7 @@
     btnWait.layer.cornerRadius = verticalRadius;
     btnAdd.layer.cornerRadius = verticalRadius;
     
-    
+
     
     
 }
@@ -842,7 +871,194 @@
 
 
 
+-(void) workButtonWait:(UIButton *) btn{
+    [self calculate];
+}
 
+//计算
+-(void) calculate{
+    if ([operationStr length]>0&&!isshow&&iscalculate) {
+        iscalculate=NO;
+        double newNum=[[numInfolLabel text] doubleValue];
+        double resultNum = 0.0;
+        if([operationStr isEqualToString:@"+" ]){
+            resultNum=storageNum+newNum;
+        }else if([operationStr isEqualToString:@"-" ]){
+            resultNum=storageNum-newNum;
+        }else if([operationStr isEqualToString:@"×" ]){
+            resultNum=storageNum*newNum;
+        }else if([operationStr isEqualToString:@"/" ]){
+            if (storageNum==0) {
+                NSLog(@"被除数为零 异常");
+                resultNum=0;
+            }else{
+                resultNum=storageNum/newNum;
+            }
+        }
+        NSString *text=[self dataPrecisionDispose:resultNum];
+        numInfolLabel.text=text;
+        [self labelInfoLengthSet:[text length]];
+        [self buttonEmpty:text];
+    }
+}
+
+
+
+//加减乘除
+-(void) addReduceRideDivide:(UIButton *)btn{
+    
+    //计算
+    [self calculate];
+    
+    operationStr=btn.titleLabel.text;
+    storageNum =[numInfolLabel.text doubleValue];
+    isshow=YES;
+}
+
+
+
+
+
+
+//清空 归零
+-(void) workButtonEmpty: (UIButton *)btn{
+    numInfolLabel.text= @"0";
+    NSString *text= numInfolLabel.text;
+    [self labelInfoLengthSet:[text length]];
+    [self buttonEmpty:text];
+    
+    
+    //清空存储和计算数值
+    operationStr=@"";
+    storageNum=0;
+    isshow=NO;
+    iscalculate=NO;
+}
+
+//buttonEmpty 值变化
+-(void)  buttonEmpty:(NSString *) str{
+    if ([str isEqualToString:@"0"]) {
+        [btnEmpty setTitle:@"AC" forState:UIControlStateNormal];
+    }else{
+        [btnEmpty setTitle:@"C" forState:UIControlStateNormal];
+    }
+}
+
+//数字信息长度变化改变字体大小
+-(void) labelInfoLengthSet:(NSUInteger)leg{
+    if (leg<(NSUInteger ) 9) {
+        numInfolLabel.font=[UIFont systemFontOfSize:70];
+    }else if(leg<(NSUInteger ) 16){
+        numInfolLabel.font=[UIFont systemFontOfSize:40];
+    }else if(leg<(NSUInteger ) 30){
+        numInfolLabel.font=[UIFont systemFontOfSize:25];
+    }
+}
+
+-(void) workButtonNumber : (UIButton *)btn{
+    if (isshow) {
+        numInfolLabel.text=@"0";
+        isshow=NO;
+        iscalculate=true;
+    }
+    NSString *text= numInfolLabel.text;
+    NSString *btnText=btn.titleLabel.text;
+    if ([text isEqualToString: @"0"]) {
+        text=btnText;
+    }else{
+        text= [text stringByAppendingString:btnText];
+    }
+    
+    [self labelInfoLengthSet:[text length]];
+    [self buttonEmpty:text];
+    numInfolLabel.text=text;
+}
+
+
+-(void) workButtonDot:(UIButton *)btn {
+    //判断是否已有小数点
+    NSString *text=numInfolLabel.text;
+    if (![text containsString:@"."]) {
+        text= [text stringByAppendingString:@"."];
+        numInfolLabel.text=text;
+        [self labelInfoLengthSet:[text length]];
+        [self buttonEmpty:text];
+    }else{
+        NSLog(@"已经有小数点了");
+    }
+}
+
+
+-(void) workButtonLose:(UIButton *)btn{
+    NSString *text=numInfolLabel.text;
+    if (![text isEqualToString:@"0"]) {
+        if ([text hasPrefix:@"-"]) {
+            NSRange range;
+            range.location=1;
+            range.length=[text length]-1;
+            text=  [text substringWithRange: range];
+        }else{
+            text= [@"-" stringByAppendingString:text];
+        }
+        numInfolLabel.text=text;
+         storageNum =[numInfolLabel.text doubleValue];
+        
+        [self labelInfoLengthSet:[text length]];
+        [self buttonEmpty:text];
+    }
+}
+
+-(void) workButtonPercent:(UIButton *)btn{
+    NSString *text=numInfolLabel.text;
+    if (![text isEqualToString:@"0"]) {
+        if (![text isEqualToString:@"0."]) {
+            double textdouble= [text doubleValue];
+            textdouble=textdouble/100;
+            text= [self dataPrecisionDispose:textdouble];
+            numInfolLabel.text=text;
+            storageNum =[numInfolLabel.text doubleValue];
+        }else{
+            numInfolLabel.text=@"0";
+        }
+    }
+    [self labelInfoLengthSet:[text length]];
+    [self buttonEmpty:text];
+}
+
+//精度问题，以及浮点型类型的后面多余的0处理
+//处理流程先保留9位小数（nsstring）
+//在转换为double
+-(NSString *) dataPrecisionDispose: (double)doublenum{
+    
+    //保留9位小数
+    NSString  *textnum=[NSString stringWithFormat:@"%.9f", doublenum];
+    double num=[textnum doubleValue];
+    if (num==0) {
+        return @"0";
+    }else{
+        
+        //去除 textnum 末尾的0
+        for(int i=(int)[textnum length]-1;i>=0;i--){
+            if ([textnum hasSuffix:@"0"] || [textnum hasSuffix:@"."]) {
+                NSRange range;
+                range.location=0;
+                range.length=[textnum length]-1;
+                //结尾为小数点
+                if ([textnum hasSuffix:@"."]) {
+                    textnum=  [textnum substringWithRange: range];
+                    return textnum;
+                }
+                
+                textnum=  [textnum substringWithRange: range];
+            }else{
+                return textnum;
+            }
+        }
+        return @"0";
+    }
+    
+    
+}
 
 
 
