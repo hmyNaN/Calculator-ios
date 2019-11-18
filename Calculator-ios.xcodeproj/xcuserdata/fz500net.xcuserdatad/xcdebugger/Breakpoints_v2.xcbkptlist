@@ -12,11 +12,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Calculator-ios/Views/CalculatorView.m"
-            timestampString = "595757177.3720649"
+            timestampString = "595764897.288434"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "560"
-            endingLineNumber = "560"
+            startingLineNumber = "410"
+            endingLineNumber = "410"
             landmarkName = "-levelState"
             landmarkType = "7">
          </BreakpointContent>
@@ -29,11 +29,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Calculator-ios/Views/CalculatorView.m"
-            timestampString = "595757177.3721499"
+            timestampString = "595764897.288924"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "561"
-            endingLineNumber = "561"
+            startingLineNumber = "411"
+            endingLineNumber = "411"
             landmarkName = "-levelState"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,11 +46,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Calculator-ios/Views/CalculatorView.m"
-            timestampString = "595757177.372195"
+            timestampString = "595764897.289265"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "706"
-            endingLineNumber = "706"
+            startingLineNumber = "580"
+            endingLineNumber = "580"
             landmarkName = "-verticalState"
             landmarkType = "7">
          </BreakpointContent>
@@ -63,11 +63,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Calculator-ios/Views/CalculatorView.m"
-            timestampString = "595757177.372236"
+            timestampString = "595764897.289587"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "960"
-            endingLineNumber = "960"
+            startingLineNumber = "826"
+            endingLineNumber = "826"
             landmarkName = "-workButtonNumber:"
             landmarkType = "7">
          </BreakpointContent>
@@ -80,11 +80,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Calculator-ios/Views/CalculatorView.m"
-            timestampString = "595757177.372274"
+            timestampString = "595764897.289934"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "955"
-            endingLineNumber = "955"
+            startingLineNumber = "821"
+            endingLineNumber = "821"
             landmarkName = "-labelInfoLengthSet:"
             landmarkType = "7">
          </BreakpointContent>

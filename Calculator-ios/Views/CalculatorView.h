@@ -30,11 +30,12 @@
     UIView* keyboardView;
     
     //按键
-    UIButton *btn1_1, *btn1_2, *btn1_3, *btn1_4, *btn1_5, *btn1_6;
-    UIButton *btn2_1, *btn2_2, *btn2_3, *btn2_4, *btn2_5, *btn2_6;
-    UIButton *btn3_1, *btn3_2, *btn3_3, *btn3_4, *btn3_5, *btn3_6;
-    UIButton *btn4_1, *btn4_2, *btn4_3, *btn4_4, *btn4_5, *btn4_6;
-    UIButton *btn5_1, *btn5_2, *btn5_3, *btn5_4, *btn5_5, *btn5_6;
+    UIButton *leftbBracketBtn, *rightBracketBtn, *MCBtn, *MAddBtn, *MMinusBtn, *MRBtn;
+    UIButton *towNdowerBtn, *xSquareBtn, *xCubeBtn, *xYPowerBtn, *eXPowerBtn, *tenXPowerBtn;
+    UIButton *onePartOfXBtn, *rootNumberXBtn, *cubeRootXBtn, *yThRootOfXBtn, *lnBtn, *log10Btn;
+    UIButton *xOppositeBtn, *sinBtn, *cosBtn, *tanBtn, *eBtn, *eEBtn;
+    UIButton *radBtn, *sinhBtn, *coshBtn, *tanhBtn, *piBtn, *randBtn;
+    
     UIButton *btnEmpty, *btnLose, *btnPercent, *btnDivide;
     UIButton *btn7, *btn8, *btn9, *btnRide;
     UIButton *btn4, *btn5, *btn6, *btnReduce;
