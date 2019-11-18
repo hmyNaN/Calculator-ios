@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		610859AD23826EBF0043291F /* module-logo-app-calculator.png in Resources */ = {isa = PBXBuildFile; fileRef = 610859AC23826EBF0043291F /* module-logo-app-calculator.png */; };
 		61E2A3F5237E6EBA004F277A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E2A3F4237E6EBA004F277A /* AppDelegate.m */; };
-		61E2A3F8237E6EBA004F277A /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E2A3F7237E6EBA004F277A /* SceneDelegate.m */; };
 		61E2A3FB237E6EBA004F277A /* CalculatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E2A3FA237E6EBA004F277A /* CalculatorView.m */; };
 		61E2A3FE237E6EBA004F277A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61E2A3FC237E6EBA004F277A /* Main.storyboard */; };
 		61E2A400237E6EBD004F277A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61E2A3FF237E6EBD004F277A /* Assets.xcassets */; };
@@ -22,8 +21,6 @@
 		61E2A3F0237E6EBA004F277A /* Calculator-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calculator-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61E2A3F3237E6EBA004F277A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		61E2A3F4237E6EBA004F277A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		61E2A3F6237E6EBA004F277A /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		61E2A3F7237E6EBA004F277A /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		61E2A3F9237E6EBA004F277A /* CalculatorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorView.h; sourceTree = "<group>"; };
 		61E2A3FA237E6EBA004F277A /* CalculatorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorView.m; sourceTree = "<group>"; };
 		61E2A3FD237E6EBA004F277A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,8 +71,6 @@
 			children = (
 				61E2A40D237E71D7004F277A /* Views */,
 				61E2A40C237E6F20004F277A /* AppDelegate */,
-				61E2A3F6237E6EBA004F277A /* SceneDelegate.h */,
-				61E2A3F7237E6EBA004F277A /* SceneDelegate.m */,
 				61E2A3FC237E6EBA004F277A /* Main.storyboard */,
 				61E2A3FF237E6EBD004F277A /* Assets.xcassets */,
 				61E2A401237E6EBD004F277A /* LaunchScreen.storyboard */,
@@ -177,7 +172,6 @@
 				61E2A3FB237E6EBA004F277A /* CalculatorView.m in Sources */,
 				61E2A3F5237E6EBA004F277A /* AppDelegate.m in Sources */,
 				61E2A406237E6EBD004F277A /* main.m in Sources */,
-				61E2A3F8237E6EBA004F277A /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
